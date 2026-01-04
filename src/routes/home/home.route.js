@@ -1,8 +1,8 @@
 import "./home.styles.scss"
 import Carousel from "../../components/carousel/carousel.component";
 import CarouselItems from "../../carouselItems"
-import ProfileImage from "../../images/Other Images/linked-pic.jpg"
-import Dotnet from "../../images/dotnet-tile.svg"
+// import ProfileImage from "../../images/Other Images/linked-pic.jpg"
+// import Dotnet from "../../images/dotnet-tile.svg"
 
 const Home = () => {
     return (
