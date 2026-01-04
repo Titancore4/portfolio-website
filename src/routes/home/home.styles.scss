@@ -192,7 +192,7 @@
                 inset: 0; /* fills the div */
                 border-radius: 20px;
                 padding: 5px; /* border thickness */
-                background: linear-gradient(to bottom, theme.$secondary-color, theme.$quaternary-color);
+                background: linear-gradient(to bottom, theme.$tertiary-color, theme.$quaternary-color);
                 -webkit-mask:
                 linear-gradient(#fff 0 0) content-box, 
                 linear-gradient(#fff 0 0);
@@ -207,7 +207,7 @@
                 font-weight: bold;
                 margin: 0;
                 padding: 0;
-                background: linear-gradient(to bottom, theme.$secondary-color, theme.$quaternary-color);
+                background: linear-gradient(to bottom, theme.$tertiary-color, theme.$quaternary-color);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
