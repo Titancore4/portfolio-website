@@ -21,7 +21,11 @@ const Project = ({ data }) => {
     <div className="project">
       <a href={link} target="_blank" rel="noopener noreferrer">{title} <i class="fa-solid fa-link fa-beat fa-2xs"></i></a>
       <div className="project-content">
-        <p>{text}</p>
+        {
+          text.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))
+        }
         <Carousel ClassName="project-carousel" CarouselItems={imagesDisplay} />
       </div>
     </div>
