@@ -1,9 +1,9 @@
 import python from "./images/certificates/Python Course Certificate.jpg"
 import web from "./images/certificates/Web Development Course Certificate Image.jpg"
-import hack from "./images/certificates/EthicalHackingCertificate.jpg"
+// import hack from "./images/certificates/EthicalHackingCertificate.jpg"
 import ml from "./images/certificates/Machine Learning.jpg"
 import tpGold from "./images/certificates/RataType Gold.webp"
-import tpPlat from "./images/certificates/RataType Plat.webp"
+// import tpPlat from "./images/certificates/RataType Plat.webp"
 import tensorFlow from "./images/certificates/TensorFlow Certificate.jpg"
 
 const CarouselItems = [
