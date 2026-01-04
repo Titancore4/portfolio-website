@@ -1,0 +1,41 @@
+@use "../../breakpoints";
+@use "../../theme" as theme; // give a namespace
+
+$ButtonDistance: 700%;
+$height: 43.75rem;
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin: 150px auto;
+    flex-direction: column;
+    background-color: black;
+    background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
+
+    .main-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 80px 30px;
+
+        .carousel {
+            width: 61rem;
+            height: $height;
+            overflow: hidden;
+        }
+        
+        button {
+            height: $height;
+            width: 60px;
+            background-color: transparent;
+            color: theme.$primary-color; // use namespace
+            font-size: 3rem;
+            border: none;
+            user-select: none;
+        }
+    }
+}

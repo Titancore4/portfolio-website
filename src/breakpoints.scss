@@ -1,0 +1,63 @@
+// breakpoints.scss
+
+$breakpoints: (
+  "xs": 480px,
+  "sm": 720px,
+  "md": 960px,
+  "lg": 1300px,
+  "mlg": 2000px,
+  "xl": 2560px
+);
+
+// Max-width mixins (mobile-first would typically use min-width,
+// but this keeps your current max-width approach)
+
+@mixin xs {
+  @media (max-width: map-get($breakpoints, "xs")) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: map-get($breakpoints, "sm")) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: map-get($breakpoints, "md")) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: map-get($breakpoints, "lg")) {
+    @content;
+  }
+}
+
+@mixin mlg {
+  @media (max-width: map-get($breakpoints, "mlg")) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (max-width: map-get($breakpoints, "xl")) {
+    @content;
+  }
+}
+
+// ✅ Anything over XL (i.e., viewport >= xl + 1px)
+@mixin xxl {
+  @media (min-width: (map-get($breakpoints, "xl") + 1px)) {
+    @content;
+  }
+}
+
+// Generic max-width helper (your original)
+@mixin breakpoint($bp: 0) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}

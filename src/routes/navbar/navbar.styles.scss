@@ -1,0 +1,39 @@
+@use "../../breakpoints.scss" as *;
+@use "../../theme" as theme;
+
+.navbar {
+    background-color: black;
+
+    a {
+        color: theme.$quaternary-color;
+
+        &:focus {
+            color: theme.$quaternary-color;
+        }
+
+        @include lg {
+            font-size: 3rem;
+            font-weight: 100;
+        }
+    }
+
+    li {
+        margin-right: 100px;
+        padding: 2px 20px;
+        color: theme.$quaternary-color;
+
+        &:active {
+            color: theme.$quaternary-color;
+        }
+
+        &:focus {
+            color: theme.$quaternary-color;
+        }
+
+        &:hover {
+            color: black;
+            background-color: theme.$quaternary-color;
+            border-radius: 0.4rem;
+        }
+    }
+}

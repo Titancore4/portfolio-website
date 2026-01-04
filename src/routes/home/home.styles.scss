@@ -1,0 +1,232 @@
+@use "../../breakpoints" as *;
+@use "../../theme.scss" as theme;
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: theme.$text;
+    background-color: theme.$hello;
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+    width: 100%;
+    text-align: center;
+
+    h1 {
+        margin: 31.25rem auto;
+        font-size: 8rem;
+    }
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    width: 100%;
+    text-align: center;
+
+    .detail {
+        margin: 500px auto;
+
+        h1 {
+            font-size: 7rem;
+            color: theme.$quaternary-color;
+        }
+
+        .profile-image {
+            margin-right: 20px;
+            width: 80px;             /* bigger size for impact */
+            height: 80px;
+            object-fit: cover;        /* keep circular crop */
+            object-position: center 30%; /* adjust vertical positioning */
+            border-radius: 50%;
+
+            /* Gradient border */
+            padding: 3px; 
+            background: theme.$tertiary-color;
+            display: inline-block;
+
+            /* Inner image */
+            img {
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+
+            /* Glow */
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.4); 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 35px rgba(255, 255, 255, 0.6);
+            }
+        }
+    
+        h3 {
+            margin-top: 1.25rem;
+            color: theme.$secondary-color;
+            // font-weight: bold;
+
+            @include lg {
+                font-size: 3rem;
+            }
+        }
+    
+        span {
+            color: theme.$secondary-color;
+        }
+    }
+}
+
+.content {
+    flex-direction: column;
+    background-color: theme.$tertiary-color;
+    background-image: url("https://www.transparenttextures.com/patterns/diamond-upholstery.png");
+    height: 1000px;
+    width: 100%;
+    text-align: center;
+
+    h2 {
+        position: absolute;
+        margin-top: 30px;
+        color: theme.$quaternary-color;
+        font-size: 3rem;
+        font-weight: 100;
+        padding: 30px 60px;
+        border-top-right-radius: 80px;
+        border-bottom-right-radius: 80px;
+        background-color: theme.$primary-color;
+    }
+
+    .features {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+        padding-top: 130px;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+    
+            li {
+                color: theme.$quaternary-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin: 50px 120px;
+    
+                h4 {
+                    margin-top: 20px;
+                    font-size: 2rem;
+                }
+    
+                i {
+                    font-size: 8rem;
+                }
+            }
+        }
+    }
+}
+
+.tools-container {
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-exa.png");
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    text-align: center;
+
+    h3 {
+        color: white;
+        margin-top: 40px;
+        margin-bottom: 100px;
+        font-size: 3rem;
+        background: linear-gradient(to bottom, theme.$tertiary-color, theme.$quaternary-color);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }  
+
+    .tools {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+        margin-bottom: 200px;
+    
+        i {
+            font-size: 10rem;
+            margin: 50px 120px;
+            background: linear-gradient(to bottom, theme.$tertiary-color, theme.$quaternary-color);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+
+        .dotnet-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 120px;
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+            position: relative; /* needed for pseudo-element border */
+
+            /* Gradient border using pseudo-element */
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0; /* fills the div */
+                border-radius: 20px;
+                padding: 5px; /* border thickness */
+                background: linear-gradient(to bottom, theme.$secondary-color, theme.$quaternary-color);
+                -webkit-mask:
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+                -webkit-mask-composite: destination-out;
+                mask-composite: exclude;
+                pointer-events: none;
+            }
+
+            /* Text gradient */
+            h1 {
+                font-size: 4.5rem;
+                font-weight: bold;
+                margin: 0;
+                padding: 0;
+                background: linear-gradient(to bottom, theme.$secondary-color, theme.$quaternary-color);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }   
+}
+
+.end {
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+    height: 1000px;
+    width: 100%;
+    text-align: center;
+}
+
+hr {
+    border: 1px solid red;
+    border-width: 5px;
+    margin: 0;
+    padding: 0;
+}
